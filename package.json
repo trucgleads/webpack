@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d dist",
-    "build": "rimraf dist && webpack --mode production",
+    "build": "rimraf dist && webpack --mode production"
   },
   "author": "",
   "license": "ISC",
