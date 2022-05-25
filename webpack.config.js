@@ -5,7 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     // cac file output
-    entry: './index.js',
+    entry: {
+        index: './index.js'
+    },
     output: {
         path: path.join(__dirname, '/dist'),
         filename: '[name].js',
@@ -54,11 +56,11 @@ module.exports = {
     plugins: [
         // new CleanWebpackPlugin(),
         // parse template duoi khac thanh HTML
-        // new HtmlWebpackPlugin({
-        //     chunks: ['bundle','themeDark'],
-        //     template: './index.html',
-        //     filename: 'index.html'
-        // }),
+        new HtmlWebpackPlugin({
+            chunks: ['index'],
+            template: './index.html',
+            filename: 'index.html'
+        }),
         // Extract CSS ra khoi bundle thanh file rieng
         // new MiniCssExtractPlugin({
         //     chunks: ['bundle', 'vendors','themeDark','themeLight'],
